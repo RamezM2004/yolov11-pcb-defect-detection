@@ -13,13 +13,26 @@ from sahi.predict import get_sliced_prediction
 # USER SETTINGS
 # ============================================================
 
-MODEL_PATH = Path(r"C:\Users\USER\OneDrive - GJU\Desktop\4th Year\MI 2\Project\100epchs_best\best.pt")
-DATA_YAML = Path(r"DSPCBSD+-1\data.yaml")
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent
 
-TEST_IMAGES_DIR = Path(r"DSPCBSD+-1\test\images")
-TEST_LABELS_DIR = Path(r"DSPCBSD+-1\test\labels")
+MODEL_PATH = ROOT_DIR / "weights" / "best.pt"
+if not MODEL_PATH.exists():
+    MODEL_PATH = Path(r"C:\Users\USER\OneDrive - GJU\Desktop\4th Year\4.2\MI 2\Project\100epchs_best\best.pt")
 
-OUTPUT_DIR = Path(r"sahi_results\best_100ep_sahi_full_metrics")
+DATA_YAML = ROOT_DIR / "data" / "data.yaml"
+if not DATA_YAML.exists():
+    DATA_YAML = Path(r"DSPCBSD+-1\data.yaml")
+
+TEST_IMAGES_DIR = ROOT_DIR / "data" / "test" / "images"
+if not TEST_IMAGES_DIR.exists():
+    TEST_IMAGES_DIR = Path(r"DSPCBSD+-1\test\images")
+
+TEST_LABELS_DIR = ROOT_DIR / "data" / "test" / "labels"
+if not TEST_LABELS_DIR.exists():
+    TEST_LABELS_DIR = Path(r"DSPCBSD+-1\test\labels")
+
+OUTPUT_DIR = ROOT_DIR / "sahi_results" / "best_100ep_sahi_full_metrics"
 
 DEVICE = "cuda:0"
 

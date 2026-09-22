@@ -81,3 +81,26 @@ If you use this work, please cite:
   year={2026}
 }
 ```
+---
+
+## Quickstart & Evaluation
+
+The repository includes pre-trained weights (`weights/best.pt`), the dataset schema (`data/data.yaml`), and the test image split (`data/test/`) for immediate evaluation.
+
+### 1. Installation
+```bash
+git clone https://github.com/RamezM2004/yolov11-pcb-defect-detection.git
+cd yolov11-pcb-defect-detection
+pip install -r requirements.txt
+```
+
+### 2. Run SAHI Sliced Inference on Test Set
+```bash
+python scripts/test_sahi_100ep.py
+```
+
+### 3. Download Full Training Dataset (Optional)
+To download the complete DeepPCB / DSPCBSD training set from Roboflow Universe:
+```bash
+python scripts/download_dataset.py
+```
