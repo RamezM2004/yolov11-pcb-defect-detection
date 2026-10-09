@@ -3,7 +3,8 @@
 
 **Authors:** Yasmin Al Hendawy, Ramez Al-Masadeh, Dr. Ghaith Al Refai  
 **Affiliation:** Department of Mechatronics and Artificial Intelligence Engineering, German Jordanian University (GJU), Amman, Jordan  
-**Preprint / Publication:** Included in `paper/Defect_Detection_PCB.pdf`
+**Publication Status:** Accepted at the ICFT conference
+**Paper:** Included in `paper/Defect_Detection_PCB.pdf`
 
 ---
 
@@ -11,7 +12,7 @@
 
 Automated Optical Inspection (AOI) of Printed Circuit Boards (PCBs) is critical in electronics manufacturing to eliminate manufacturing flaws such as broken traces, spurs, and shorts. While modern literature routinely adds attention modules or extra detection heads to boost benchmarks, this research conducts an exhaustive, stage-by-stage empirical ablation to evaluate whether such architectural additions genuinely outperform a well-tuned baseline.
 
-This repository contains the model architectures, training configurations, and sliced inference scripts evaluated on the **DsPCBSD+ (Dataset of Printed Circuit Board Surface Defects)** benchmark.
+This repository contains the model architectures, training configurations, and sliced inference scripts evaluated on the **DsPCBSD+ (Dataset of Printed Circuit Board Surface Defects)** benchmark. The project started as a Machine Intelligence II course project and was later developed into an accepted ICFT conference paper.
 
 ---
 
@@ -77,7 +78,7 @@ If you use this work, please cite:
 @article{alhendawy2026yolov11pcb,
   title={A Stage-Wise Evaluation of YOLOv11s for PCB Surface Defect Detection: Input, Backbone, Neck, Head, and Inference-Level Modifications},
   author={Al Hendawy, Yasmin and Al-Masadeh, Ramez and Al Refai, Ghaith},
-  journal={Department of Mechatronics and Artificial Intelligence Engineering, German Jordanian University},
+  journal={ICFT Conference},
   year={2026}
 }
 ```
